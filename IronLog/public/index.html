@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IronLog</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div id="gate" class="gate">
+  <div class="gate-card">
+    <h1 class="logo">IRON<span>LOG</span></h1>
+    <p class="muted">Train. Log. Climb the ranks.</p>
+    <div class="tabs" id="authTabs">
+      <button class="tab active" data-m="login">Log in</button>
+      <button class="tab" data-m="register">Sign up</button>
+    </div>
+    <form id="authForm">
+      <input name="username" placeholder="username" autocomplete="username" required>
+      <input name="display_name" placeholder="display name" class="hide reg-only">
+      <input name="password" type="password" placeholder="password" autocomplete="current-password" required>
+      <button class="btn primary" type="submit">Continue</button>
+      <p class="err" id="authErr"></p>
+    </form>
+  </div>
+</div>
+
+<div id="shell" class="hide">
+  <header class="topbar">
+    <a href="#/home" class="logo sm">IRON<span>LOG</span></a>
+    <nav id="nav">
+      <a href="#/home">Today</a><a href="#/meals">Meals</a><a href="#/gym">Gym</a>
+      <a href="#/plans">Plans</a><a href="#/coach">Coach</a><a href="#/board">Ranks</a>
+    </nav>
+    <a href="#/me" class="me-chip" id="meChip"></a>
+  </header>
+  <main id="view"></main>
+  <footer class="foot">IronLog · self-hosted · AI estimates are not medical advice</footer>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>
